@@ -27,10 +27,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/helvizar/openmusic-api-v1.git"
+    "url": "git+https://github.com/helvizar/openmusic-api.git"
   },
   "bugs": {
-    "url": "https://github.com/helvizar/openmusic-api-v1/issues"
+    "url": "https://github.com/helvizar/openmusic-api/issues"
   },
-  "homepage": "https://github.com/helvizar/openmusic-api-v1#readme"
+  "homepage": "https://github.com/helvizar/openmusic-api#readme"
 }
