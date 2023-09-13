@@ -1,7 +1,9 @@
 /* eslint-disable no-underscore-dangle */
-
 class UsersHandler {
-  constructor(UsersService, UsersValidator) {
+  constructor(
+    UsersService,
+    UsersValidator,
+  ) {
     this._usersService = UsersService;
     this._usersValidator = UsersValidator;
   }

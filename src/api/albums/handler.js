@@ -1,15 +1,13 @@
 /* eslint-disable no-underscore-dangle */
 class AlbumsHandler {
-  constructor(AlbumsService, SongsService, AlbumsValidator) {
+  constructor(
+    AlbumsService,
+    SongsService,
+    AlbumsValidator,
+  ) {
     this._albumsService = AlbumsService;
     this._songsService = SongsService;
     this._albumsValidator = AlbumsValidator;
-
-    this.postAlbumHandler = this.postAlbumHandler.bind(this);
-    this.getAlbumsHandler = this.getAlbumsHandler.bind(this);
-    this.getAlbumByIdHandler = this.getAlbumByIdHandler.bind(this);
-    this.putAlbumByIdHandler = this.putAlbumByIdHandler.bind(this);
-    this.deleteAlbumByIdHandler = this.deleteAlbumByIdHandler.bind(this);
   }
 
   async postAlbumHandler(request, h) {

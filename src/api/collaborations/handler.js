@@ -1,7 +1,10 @@
 /* eslint-disable no-underscore-dangle */
-
 class CollaborationsHandler {
-  constructor(CollaborationsService, PlaylistsService, CollaborationsValidator) {
+  constructor(
+    CollaborationsService,
+    PlaylistsService,
+    CollaborationsValidator,
+  ) {
     this._collaborationsService = CollaborationsService;
     this._playlistsService = PlaylistsService;
     this._collaborationsValidator = CollaborationsValidator;

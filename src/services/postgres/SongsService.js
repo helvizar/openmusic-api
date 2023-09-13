@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 const { Pool } = require('pg');
 const { nanoid } = require('nanoid');
+
 const { mapDBToModelSong } = require('../../utils/songs');
 const InvariantError = require('../../exceptions/InvariantError');
 const NotFoundError = require('../../exceptions/NotFoundError');
@@ -52,10 +53,9 @@ class SongsService {
 
     const result = await this._pool.query(query);
 
-    // Ubah result.rows menjadi array objek yang sesuai dengan model Anda
     const songs = result.rows.map(mapDBToModelSong);
 
-    return songs; // Kembalikan array objek, bukan hasil langsung
+    return songs;
   }
 
   async getSongById(id) {
