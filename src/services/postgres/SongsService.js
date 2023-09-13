@@ -52,7 +52,10 @@ class SongsService {
 
     const result = await this._pool.query(query);
 
-    return result.rows.map(mapDBToModelSong);
+    // Ubah result.rows menjadi array objek yang sesuai dengan model Anda
+    const songs = result.rows.map(mapDBToModelSong);
+
+    return songs; // Kembalikan array objek, bukan hasil langsung
   }
 
   async getSongById(id) {
@@ -67,7 +70,7 @@ class SongsService {
       throw new NotFoundError('Lagu tidak ditemukan');
     }
 
-    return result.rows.map(mapDBToModelSong)[0];
+    return mapDBToModelSong(result.rows[0]);
   }
 
   async getSongByAlbumId(albumId) {
