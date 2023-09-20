@@ -8,11 +8,15 @@ module.exports = {
     albumsService,
     songsService,
     validator,
+    StorageService,
+    UploadsValidator,
   }) => {
     const albumsHandler = new AlbumsHandler(
       albumsService,
       songsService,
       validator,
+      StorageService,
+      UploadsValidator,
     );
 
     server.route(routes(albumsHandler));
